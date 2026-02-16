@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-color: rgb(255, 224, 224);
+    background-color: rgb(194, 207, 250);
     font-size: 25px;
     display: flex;
     flex-flow: column nowrap;    
@@ -13,6 +13,11 @@ table {
     border-radius: 10px;
     padding: 10px;
     border: 2px solid;
+}
+
+input::placeholder{
+
+    color: gray;
 }
 
 textArea {

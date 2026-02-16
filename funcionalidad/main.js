@@ -12,7 +12,6 @@ botonVerHistorial.addEventListener("click", verHistorial);
 
 
 
-
 function calcularCuota(){
    
     let nombre = document.getElementById("elNombre").value;   
@@ -21,12 +20,18 @@ function calcularCuota(){
     let interes = parseFloat(document.getElementById("losInteres").value);
     let info
 
-   
-    info = "La cuota es de $ " + cuota(prestamo, meses, interes)
+    if(nombre === "" || isNaN(prestamo) || isNaN(meses) || isNaN(interes)){
+        
+        laSalida.textContent = "Debe llenar los campos"
+    }else if(prestamo < 0 || prestamo == 0 || meses < 0 || meses == 0 || interes < 0 || interes == 0 ){
+        laSalida.textContent = "Error: No pueden haber valores negativos o iguales a cero"
+
+    }else{
+    info = nombre +", debe pagar $" + cuota(prestamo, meses, interes) + " cada mes por el prestamo de $" + prestamo + " a " +meses+ " meses con el interes del " + interes + "%"
         
     laSalida.textContent = info;
     
-
+    }
 }
 
 function verHistorial(){
