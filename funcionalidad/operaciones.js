@@ -1,7 +1,8 @@
-function cuota(prestamo, meses, interes){
-    interes = interes/100
-    let res = prestamo * ((((1+interes)**meses)*interes)/(((1+interes)**meses)-1));
-    return res;
+function cuota(prestamo, i, n){
+    i = 1/100
+    let aux = Math.pow((1+i),n)
+    let oper = prestamo * ((aux*i)/(aux-1))
+    return oper;
 
 }
 

@@ -10,7 +10,7 @@
 </head>
 <body>
     <head>
-        <h1>Calculadora Online</h1>
+        <h1>CALCULADORA ONLINE</h1>
     </head>
     <main>
         </section>       
@@ -40,20 +40,36 @@
                         <!-- pudo ser de tipo number -->
                         <input title="input" type="text" placeholder="Ej: 9.3" id="losInteres">
                     </td>
-                </tr>                
+                </tr>  
+                <tr>
+                        <td>Tipo de Reporte</td>
+                        <td>
+                            <select id="tipos">
+                                <option value="sumatoriaCuotas" selected>Sumatoria de cada cuota</option><!-- Opción por defecto -->
+                                <option value="cuotasMayores300">Cuotas mayores a $300000</option> 
+                                <option value="prestamosMenorUnAno">Pagos menores a un año</option> 
+                                <option value="primerPrestamoMayor5M">Primer préstamo superior a $5000000</option>
+                                <option value="ultimoInteresMenor2">Último interés inferior a 2%</option>
+                                <option value="incrementarCuotas">Incrementar cuotas en $90000</option> 
+                                <option value="decrementarPrestamos">Decrementar prestamos en $90000</option> 
+                                <option value="soloCuotas">Mostrar cuotas</option>                      
+                            </select>  
+                        </td>
+                    </tr>                      
             </table>
             <textarea title="textarea" id="resultadoPrestamo" readonly>Bienvenido</textarea>
             <div>
                <button id="calcular">Calcular</button> 
                <button id="recordar">Ver historial</button>
+               <button id="reporte">Realizar reporte</button>
                
             </div>           
         </section>
-        <hr>
+        <br>
     </main>
     <footer>
         <p>
-            Creado por el Miguel Benavides, estudiante de la UAO
+            Creado por Miguel Benavides, estudiante de la UAO
         </p>
             
     </footer>     
